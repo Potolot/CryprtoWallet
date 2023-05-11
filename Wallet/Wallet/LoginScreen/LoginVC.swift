@@ -59,7 +59,7 @@ final class LoginVC: UIViewController {
             string: Constants.loginPlaceholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         )
-
+        
         textField.font = .systemFont(ofSize: Constants.textFieldSize)
         textField.borderStyle = .roundedRect
         
@@ -77,7 +77,7 @@ final class LoginVC: UIViewController {
             string: Constants.pasPlaceholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
         )
-
+        
         textField.font = .systemFont(ofSize: Constants.textFieldSize)
         textField.borderStyle = .roundedRect
         
@@ -132,8 +132,6 @@ final class LoginVC: UIViewController {
         setupNavigationNavigationBar()
     }
     
-
-    
     //MARK: - Private methods
     private func tapGestureRecognizer() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap))
@@ -174,27 +172,27 @@ final class LoginVC: UIViewController {
     }
     
     private func setup() {
-       authorizationStack.axis = .vertical
-       authorizationStack.addArrangedSubview(userLoginLabel)
-       authorizationStack.addArrangedSubview(userLoginTextField)
-       authorizationStack.addArrangedSubview(passwordLabel)
-       authorizationStack.addArrangedSubview(passwordTextField)
-       authorizationStack.addArrangedSubview(button)
-       authorizationStack.spacing = Constants.authorizationStackSpacing
-       authorizationStack.setCustomSpacing(Constants.userLoginInset, after: userLoginTextField)
-       authorizationStack.setCustomSpacing(Constants.userLoginInset, after: passwordTextField)
-       view.addSubview(authorizationStack)
-       authorizationStack.snp.makeConstraints { make in
-           make.top.equalToSuperview().inset(Constants.authorizationStackTopInset)
-           make.leading.trailing.equalToSuperview().inset(Constants.authorizationStackTrailingInset)
-       }
-       
-       view.addSubview(eyeButton)
-       eyeButton.snp.makeConstraints { make in
-           make.centerY.equalTo(passwordTextField)
-           make.trailing.equalTo(passwordTextField).inset(Constants.eyeButtonInset)
-       }
-   }
+        authorizationStack.axis = .vertical
+        authorizationStack.addArrangedSubview(userLoginLabel)
+        authorizationStack.addArrangedSubview(userLoginTextField)
+        authorizationStack.addArrangedSubview(passwordLabel)
+        authorizationStack.addArrangedSubview(passwordTextField)
+        authorizationStack.addArrangedSubview(button)
+        authorizationStack.spacing = Constants.authorizationStackSpacing
+        authorizationStack.setCustomSpacing(Constants.userLoginInset, after: userLoginTextField)
+        authorizationStack.setCustomSpacing(Constants.userLoginInset, after: passwordTextField)
+        view.addSubview(authorizationStack)
+        authorizationStack.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(Constants.authorizationStackTopInset)
+            make.leading.trailing.equalToSuperview().inset(Constants.authorizationStackTrailingInset)
+        }
+        
+        view.addSubview(eyeButton)
+        eyeButton.snp.makeConstraints { make in
+            make.centerY.equalTo(passwordTextField)
+            make.trailing.equalTo(passwordTextField).inset(Constants.eyeButtonInset)
+        }
+    }
     
     private func setupNavigationNavigationBar() {
         navigationController?.navigationBar.barTintColor = UIColors.darkGrey
