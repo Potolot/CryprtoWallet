@@ -116,16 +116,23 @@ final class LoginVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Override properties
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.userLoginTextField.delegate = self
         self.passwordTextField.delegate = self
         tapGestureRecognizer()
         setup()
         view.backgroundColor = UIColors.darkGrey
+        setupNavigationNavigationBar()
     }
+    
+
     
     //MARK: - Private methods
     private func tapGestureRecognizer() {
@@ -188,6 +195,11 @@ final class LoginVC: UIViewController {
            make.trailing.equalTo(passwordTextField).inset(Constants.eyeButtonInset)
        }
    }
+    
+    private func setupNavigationNavigationBar() {
+        navigationController?.navigationBar.barTintColor = UIColors.darkGrey
+        navigationController?.navigationBar.barStyle = .black
+    }
 }
 
 //MARK: - LoginProtocolOut
@@ -195,7 +207,6 @@ extension LoginVC: LoginProtocolOut {
     func successAuth() {
         let controller = MainBuilder.build()
         let navigationVC = UINavigationController(rootViewController: controller)
-        
         AppDelegate.shared?.changeRoot(viewController: navigationVC)
     }
     

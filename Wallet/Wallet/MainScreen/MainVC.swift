@@ -81,8 +81,13 @@ final class MainVC: UIViewController {
         
         spinner.startAnimating()
         tableView.backgroundView = spinner
-        
+        setupNavigationNavigationBar()
+    }
+    
+    private func setupNavigationNavigationBar() {
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = UIColors.darkGrey
+        navigationController?.navigationBar.barStyle = .black
         navigationItem.leftBarButtonItems = makeLeftButtonItems()
         navigationItem.rightBarButtonItems = makeRightButtonItems()
     }
