@@ -5,7 +5,6 @@
 //  Created by Вадим Воляс on 25.01.2023.
 //
 
-import Foundation
 import UIKit
 
 final class QuotesCell: UITableViewCell {

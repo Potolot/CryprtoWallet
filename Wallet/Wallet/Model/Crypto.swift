@@ -5,8 +5,6 @@
 //  Created by Вадим Воляс on 24.01.2023.
 //
 
-import Foundation
-
 // MARK: - Crypto
 struct Crypto: Decodable {
     let data: Data?

@@ -5,8 +5,6 @@
 //  Created by Вадим Воляс on 29.01.2023.
 //
 
-import Foundation
-
 class UrlManager {
     
     //MARK: - Public properties

@@ -4,7 +4,6 @@
 //
 //  Created by Вадим Воляс on 21.01.2023.
 //
-import Foundation
 import UIKit
 import SnapKit
 

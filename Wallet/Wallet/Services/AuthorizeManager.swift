@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class AuthorizeManager {
     
     //MARK: - Propirties

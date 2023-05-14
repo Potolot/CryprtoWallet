@@ -5,8 +5,6 @@
 //  Created by Вадим Воляс on 21.01.2023.
 //
 
-import Foundation
-
 final class LoginViewModel: LoginProtocolIn {
     
     //MARK: - Properties

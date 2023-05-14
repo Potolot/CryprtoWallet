@@ -4,8 +4,6 @@
 //
 //  Created by Вадим Воляс on 22.01.2023.
 //
-
-import Foundation
 import UIKit
 
 final class MainVC: UIViewController {
