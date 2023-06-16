@@ -99,7 +99,3 @@ final class MainViewModel: MainProtocolIn {
     }
 
 }
-
-
-
-

@@ -124,7 +124,6 @@ extension MainVC: UITableViewDataSource {
         cell.configure(with: cellModelArray[indexPath.row])
         return cell
     }
-    
 }
 
 //MARK: - UITableViewDelegate
